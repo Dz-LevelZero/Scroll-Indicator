@@ -1,5 +1,7 @@
+import useReadingProgress from "../hooks/useReadingProgress";
 
 const Navbar = () => {
+  const completion = useReadingProgress();
 
   return (
     <nav className="bg-indigo-800 text-white py-6 sticky top-0">
@@ -13,8 +15,8 @@ const Navbar = () => {
         </div>
       </div>
       <span
-        style={{ transform: `translateX(${50 - 100}%)` }}
-        className="absolute bg-orange-600 h-1 w-full bottom-0"
+        style={{ transform: `translateX(${completion - 100}%)` }}
+        className="absolute bg-yellow-500 h-2 w-full bottom-0"
       />
     </nav>
   )
