@@ -12,6 +12,10 @@ const Navbar = () => {
           <ul><li>Contact</li></ul>
         </div>
       </div>
+      <span
+        style={{ transform: `translateX(${50 - 100}%)` }}
+        className="absolute bg-orange-600 h-1 w-full bottom-0"
+      />
     </nav>
   )
 }
